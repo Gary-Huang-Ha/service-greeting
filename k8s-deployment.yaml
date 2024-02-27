@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: service-greeting-jonathan-deployment
+  name: service-greeting-gary-deployment
 spec:
   selector:
     matchLabels:
-      app: service-greeting-jonathan
+      app: service-greeting-gary
   replicas: 1 
   template:
     metadata:
       labels:
-        app: service-greeting-jonathan 
+        app: service-greeting-gary 
     spec:
       containers:
-      - name: service-greeting-jonathan 
-        image: registry.cn-hangzhou.aliyuncs.com/wdcdavyc/service-greeting-jonathan:latest
+      - name: service-greeting-gary 
+        image: registry.cn-hangzhou.aliyuncs.com/wdcdavyc/service-greeting-gary:latest
         ports:
         - containerPort: 8080
